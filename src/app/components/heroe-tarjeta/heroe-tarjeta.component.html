@@ -1,0 +1,16 @@
+<div class="card animated fadeIn fast">
+    <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
+    <!--los [] son para que eso lo maneje angular -->
+
+    <div class="card-block">
+        <h4 class="card-title">{{ heroe.nombre }}</h4>
+        <p class="card-text">{{heroe.bio}}</p>
+        <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+
+        <!-- Aqui tenemos dos formas de hacer lo mismo. con el primero le damos el evento click
+        llama a la funcion verHeroe mandandole el indice. En el segundo caso utilizando routerLink lo mandamos a heroe
+        la barra es para que salga mejor en el navegador creo.-->
+        <button (click)="verHeroe()" class="btn btn-outline-primary btn-block">Ver más...</button>
+        <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary">Ver más link...</a> -->
+    </div>
+</div>
